@@ -1,0 +1,784 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+}
+
+/* Style */
+.whale-section{
+    width: 100%;
+}
+
+.header{
+    background-image: url(./images/mobile/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: 101% 46rem;
+    height: 46rem;
+}
+
+.header__line{
+    padding: 3.4rem 1.5rem 2rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo-main-page{
+    width: 150px;
+}
+
+.menu__mobile{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    padding: 3.4rem 1.5rem 2rem 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s opacity, 1s visibility;
+    background-color: var(--black);
+}
+
+.mobile__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile__header img{
+    width: 150px;
+}
+
+.mobile__list{
+    margin-top: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mobile__list li{
+    list-style: none;
+    color: var(--white);
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.showMenu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.header__text{
+    border: 3px solid var(--white);
+    margin: 6rem 1rem 5rem 1rem;
+    height: 14rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__text h1{
+    font-size: 46px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 4rem;
+}
+
+.desktop{
+    display: none;
+}
+
+.content {
+    margin-bottom: 6rem;
+}
+
+.vr{
+    padding: 4.5rem 1.5rem 3rem 1.5rem;
+    text-align: center;
+}
+
+.vr__image img{
+    width: 100%;
+}
+
+.vr__text{
+    padding: 2rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.vr__text h2{
+    padding: 1rem;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 32px;
+    line-height: 2.2rem
+}
+
+.vr__text p{
+    font-family: 'Alata', sans-serif;
+    color: var(--dark-gray);
+    line-height: 1.8rem;
+}
+
+.creations{
+    text-align: center;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+}
+
+.creations__head h2{
+    padding: 1rem 0 3rem 0;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+.mexmpl{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mexmpl__block{
+    cursor: pointer;
+    z-index:  2;
+}
+
+.mexmpl__block:hover img{
+    opacity: 0.4;
+}
+
+.mexmpl__block:hover p{
+    color:var(--black);
+}
+
+.mexmpl__block p{
+    position: absolute;
+    margin: 3.5rem 0 0 1rem;
+    color: var(--white);
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    width: 8rem;
+    text-align: left;
+    font-size: 23px;
+}
+
+.mexmpl img{
+    width: 100%;
+}
+
+.mexmpl__see-all button{ 
+    width: 9rem;
+    height: 2.5rem;
+    border: 1px solid black;
+    background-color: white;
+    font-family: 'Alata', sans-serif;
+    text-transform: uppercase;
+    color: var(--black);
+    letter-spacing: 0.3rem;
+    cursor: pointer;
+}
+
+.footer__mobile{
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 3.5rem 0 3rem 0;
+    gap: 1rem;
+}
+
+.footer__m-list ul{
+    padding: 1rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer__m-list ul li{
+    color: var(--white);
+    font-family: 'Alata', sans-serif;
+    list-style: none;   
+}
+
+.footer__m-links ul{
+    padding: 2rem 1rem 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer__m-text p{
+    color: var(--dark-gray);
+    padding-bottom: 1.5rem;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: #fff;
+}
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 400px) {
+    .header{
+        height: 50rem;
+    }
+    
+    .header__text{
+        margin: 8rem 1rem 5rem 1rem;
+    }
+    
+    .header__text h1{
+        font-size: 56px;
+    }
+    
+    .vr__text h2{
+        padding: 2rem;
+        font-size: 38px;
+    }
+    
+    .vr__text p{
+        font-size: 18px;
+    }
+    
+    .creations__head h2{
+        font-size: 38px;
+    }
+    
+    .mexmpl{
+        gap: 2rem;
+    }
+    
+    .mexmpl__block p{
+        margin: 5rem 0 0 1rem;
+        font-size: 27px;
+    }
+    
+    .footer__m-list ul li{
+        font-size: 20px; 
+    }
+    
+    .footer__m-links ul{
+        gap: 2rem;
+    }  
+}
+
+@media (min-width: 480px){
+    .header__logo-main-page{
+        width: 200px;
+    }
+    
+    .mobile__header img{
+        width: 200px;
+    }
+    
+    .header{
+        background-size: 100% 60rem;
+        height: 60rem;
+    }
+    
+    .header__line{
+        padding: 3.4rem 3rem 2rem 3rem;
+    }
+    
+    .menu__mobile{
+        padding: 3.4rem 3rem 2rem 3rem;
+    }
+    
+    .mobile__list{
+        margin-top: 40%;
+        gap: 2.5rem;
+    }
+    
+    .mobile__list li{
+        font-size: 26px;
+    }
+    
+    .header__text{
+        margin: 13rem 3rem 5rem 3rem;
+        height: 19.5rem;
+    }
+    
+    .header__text h1{
+        font-size: 80px;
+        line-height: 6.2rem;
+    }
+    
+    .content {
+        margin-bottom: 8rem;
+    }
+    
+    .vr{
+        padding: 10rem 3rem 5rem 3rem;
+    }
+
+    .vr__text{
+        padding: 4rem 3rem 1rem 3rem;
+
+    }
+    
+    .vr__text h2{
+        padding: 2rem 4rem 1rem 4rem;
+        font-size: 52px;
+        line-height: 3.5rem
+    }
+    
+    .vr__text p{
+        padding: 1rem 2rem 1rem 2rem;
+        font-size: 26px;
+        line-height: 2.3rem;
+    }
+    
+    .creations{
+        padding: 0 3rem 1rem 3rem;
+    }
+    
+    .creations__head h2{
+        padding: 0 3rem  5rem 3rem;
+        font-size: 52px;
+    }
+    
+    .mexmpl{
+        gap: 3rem;
+    }
+    
+    .mexmpl__block p{
+        margin: 8rem 0 0 1rem;
+        width: 12rem;
+        font-size: 36px;
+    }
+    
+    .mexmpl__see-all button{ 
+        width: 16rem;
+        height: 3rem;
+        letter-spacing: 0.6rem;
+        font-size: 18px;        
+    }
+    
+    .footer__mobile{
+        padding: 4rem 0 3rem 0;
+    }
+    
+    .footer__m-list ul{
+        gap: 2rem;
+    }
+    
+    .footer__m-list ul li{
+        font-size: 26px;  
+    }
+    
+    .footer__m-links ul{
+        padding: 2rem 1rem 1rem 1rem;
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile{
+        display: none;
+    }
+
+    .desktop{
+        display: block;
+    }
+
+    .whale-section{
+        width: 100%;
+    }
+    
+    .header{
+        background-image: url(./images/desktop/image-hero.jpg);
+        height: 30rem;
+        background-repeat: no-repeat;
+        background-size: 100% 30rem;
+    }
+    
+    .mobile{
+        display: none;
+    }
+    
+    .header__line{
+        padding: 1.5rem 2rem 2rem 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .desktop__list{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    .desktop__list li{
+        list-style: none;
+    }
+    
+    .desktop__list li a {
+        position: relative;
+        color: var(--white);
+        cursor: pointer;
+        line-height: 1;
+        text-decoration: none;
+    }
+    
+    .desktop__list li a:after {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--white);
+        content: "";
+        transition: width 0.3s ease-out;
+    }
+    
+    .desktop__list li a:hover:after,
+    a:focus:after {
+        width: 100%;
+    }
+    
+    .header__text{
+        margin: 5rem 0 0 29%; 
+        border: 3px solid var(--white);
+        width: 20rem;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .header__text h1{
+        font-size: 40px;
+        font-family: 'Josefin Sans', sans-serif;
+        color: var(--white);
+        text-transform: uppercase;
+        font-weight: 300;
+        line-height: 3rem;
+        padding-top: 12px;
+    }
+    
+    /*.content {
+        margin-bottom: 6rem;
+    }*/
+    
+    .vr{
+        padding: 6rem 3rem 3rem 3rem;
+    }
+    
+    .vr__image img{
+        width: 60%;
+    }
+    
+    .vr__text{
+        position: absolute;
+        width: 54%;
+        margin-top: -9rem;
+        margin-left: 18.5rem;
+        background-color: var(--white);
+        padding: 1rem;
+    }
+    
+    .vr__text{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .vr__text h2{
+        padding: 1rem;
+        text-transform: uppercase;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 28px;
+        line-height: 2.2rem
+    }
+    
+    .vr__text p{
+        padding: 0 1rem 0 1rem;
+        font-family: 'Alata', sans-serif;
+        color: var(--dark-gray);
+        font-size: 15px;
+        line-height: 1.4rem;
+    }
+    
+    .creations{
+        margin: 10rem 3rem 2rem 3rem;
+    }
+    
+    .creations__head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0 3rem 0;
+    }
+    
+    .creations__head h2{
+        font-family: 'Josefin Sans', sans-serif;
+        text-transform: uppercase;
+        font-size: 32px;
+    }
+    
+    .creations__head button{
+        height: 2.5rem;
+        width: 9rem;
+        border: 1px solid var(--black);
+        background-color: var(--white);
+        font-family: 'Alata', sans-serif;
+        text-transform: uppercase;
+        color: var(--black);
+        letter-spacing: 0.3rem;
+        cursor: pointer;
+    }
+    
+    .dexmpl{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    
+    .dexmpl__block p{
+        position: absolute;
+        margin: 13rem 1rem 0rem 1rem;
+        color: var(--white);
+        font-family: 'Josefin Sans', sans-serif;
+        text-transform: uppercase;
+        width: 8rem;
+        text-align: left;
+        font-size: 23px; 
+    }
+    
+    .dexmpl__block:hover img{
+        opacity: 0.4;
+    }
+    
+    .dexmpl__block:hover p{
+        color:var(--black);
+    }
+    
+    .dexmpl img{
+        width: 100%;
+    }
+    
+    .footer__desktop{
+        background-color: var(--black);
+        padding: 2rem 3rem 2rem 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .footer__d-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .footer__d-bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .footer__d-list ul{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    
+    
+    .footer__d-list ul li{
+        color: var(--white);
+        list-style: none;
+    }
+    
+    .footer__d-text{
+        color: var(--dark-gray)
+    }    
+}
+
+@media (min-width: 900px){
+    .header{
+        height: 35rem;
+        background-size: 100% 35rem;
+    }
+    
+    .header__line{
+        padding: 3rem 5rem 2rem 5rem;
+    }
+    
+    .desktop__list{
+        gap: 1.5rem;
+    }
+    
+    .header__text{
+        margin: 5rem 0 0 34%; 
+        width: 24rem;
+        height: 12rem;
+    }
+    
+    .header__text h1{
+        font-size: 48px;
+        line-height: 3.7rem;
+        padding-top: 20px;
+    }
+
+    .vr{
+        padding: 6rem 5rem 3rem 5rem;
+    }
+    
+    .vr__image img{
+        width: 70%;
+    }
+    
+    .vr__text{
+        width: 45%;
+        margin-top: -16rem;
+        margin-left: 35rem;
+        padding: 2rem;
+    }
+    
+    .vr__text h2{
+        padding: 1rem;
+        font-size: 36px;
+        line-height: 2.2rem
+    }
+    
+    .vr__text p{
+        font-size: 18px;
+        line-height: 1.6rem;
+    }
+    
+    .creations{
+        margin: 5rem 5rem 2rem 5rem;
+    }
+    
+    .creations__head h2{
+        font-size: 36px;
+    }
+    
+    .creations__head button{
+        width: 10rem;
+    }
+    
+    .dexmpl{
+        gap: 1.5rem;
+    }
+    
+    .dexmpl__block p{
+        margin: 21rem 1rem 0rem 1rem;
+        font-size: 28px; 
+    }
+    
+    .footer__desktop{
+        padding: 3rem 5rem 3rem 5rem;
+    }
+    
+    
+    .footer__d-list ul{
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px){ 
+    .header{
+        height: 45rem;
+        background-size: 100% 45rem;
+    }
+
+    .header__line{
+        padding: 4rem 8rem 2rem 8rem;
+    }
+    
+    .desktop__list{
+        gap: 2rem;
+    }
+
+    .header__text{
+        margin: 7rem 0 0 35%; 
+        width: 26rem;
+        height: 14rem;
+    }
+    
+    .header__text h1{
+        font-size: 56px;
+        line-height: 4rem;
+    }
+    
+    .vr{
+        padding: 8rem 8rem 3rem 8rem;
+    }
+    
+    .vr__text{
+        width: 40%;
+        margin-top: -16rem;
+        margin-left: 40rem;
+        padding: 3rem;
+    }
+    
+    .vr__text h2{
+        padding: 2rem;
+        font-size: 40px;
+        line-height: 3rem
+    }
+    
+    .vr__text p{
+        padding: 0 2rem 0 2rem;
+        font-size: 20px;
+        line-height: 2rem;
+    }
+    
+    .creations{
+        margin: 10rem 8rem 2rem 8rem;
+    }
+    
+    .creations__head h2{
+        font-size: 40px;
+    }
+    
+    .creations__head button{
+        height: 3rem;
+        width: 12rem;
+        letter-spacing: 0.4rem;
+    }
+    
+    .dexmpl{
+        gap: 2rem;
+    }
+    
+    .dexmpl__block p{
+        margin: 22rem 1rem 0rem 1rem;
+        font-size: 32px; 
+    }
+    
+    .footer__desktop{
+        background-color: var(--black);
+        padding: 3rem 8rem 2rem 8rem;
+    }
+    
+    .footer__d-list ul{
+        gap: 2rem;
+    }
+}

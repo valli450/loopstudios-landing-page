@@ -1,0 +1,395 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+}
+/* Style */
+.whale-section{
+    width: 100%;
+}
+
+.header{
+    background-image: url(./images/desktop/image-hero.jpg);
+    height: 30rem;
+    background-repeat: no-repeat;
+    background-size: 100% 30rem;
+}
+
+.mobile{
+    display: none;
+}
+
+.header__line{
+    padding: 1.5rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desktop__list{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.desktop__list li{
+    list-style: none;
+}
+
+.desktop__list li a {
+	position: relative;
+	color: var(--white);
+	cursor: pointer;
+	line-height: 1;
+	text-decoration: none;
+}
+
+.desktop__list li a:after {
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: var(--white);
+	content: "";
+	transition: width 0.3s ease-out;
+}
+
+.desktop__list li a:hover:after,
+a:focus:after {
+	width: 100%;
+}
+
+.header__text{
+    margin: 5rem 0 0 29%; 
+    border: 3px solid var(--white);
+    width: 20rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__text h1{
+    font-size: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 3rem;
+    padding-top: 12px;
+}
+
+/*.content {
+    margin-bottom: 6rem;
+}*/
+
+.vr{
+    padding: 6rem 3rem 3rem 3rem;
+}
+
+.vr__image img{
+    width: 60%;
+}
+
+.vr__text{
+    position: absolute;
+    width: 54%;
+    margin-top: -9rem;
+    margin-left: 18.5rem;
+    background-color: var(--white);
+    padding: 1rem;
+}
+
+.vr__text{
+    display: flex;
+    flex-direction: column;
+}
+
+.vr__text h2{
+    padding: 1rem;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 28px;
+    line-height: 2.2rem
+}
+
+.vr__text p{
+    padding: 0 1rem 0 1rem;
+    font-family: 'Alata', sans-serif;
+    color: var(--dark-gray);
+    font-size: 15px;
+    line-height: 1.4rem;
+}
+
+.creations{
+    margin: 10rem 3rem 2rem 3rem;
+}
+
+.creations__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 3rem 0;
+}
+
+.creations__head h2{
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+.creations__head button{
+    height: 2.5rem;
+    width: 9rem;
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    font-family: 'Alata', sans-serif;
+    text-transform: uppercase;
+    color: var(--black);
+    letter-spacing: 0.3rem;
+    cursor: pointer;
+}
+
+.dexmpl{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.dexmpl__block p{
+    position: absolute;
+    margin: 13rem 1rem 0rem 1rem;
+    color: var(--white);
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    width: 8rem;
+    text-align: left;
+    font-size: 23px; 
+}
+
+.dexmpl__block:hover img{
+    opacity: 0.4;
+}
+
+.dexmpl__block:hover p{
+    color:var(--black);
+}
+
+.dexmpl img{
+    width: 100%;
+}
+
+.footer__desktop{
+    background-color: var(--black);
+    padding: 2rem 3rem 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer__d-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__d-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__d-list ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+
+.footer__d-list ul li{
+    color: var(--white);
+    list-style: none;
+}
+
+.footer__d-text{
+    color: var(--dark-gray)
+}
+
+@media (min-width: 900px){
+    .header{
+        height: 35rem;
+        background-size: 100% 35rem;
+    }
+    
+    .header__line{
+        padding: 3rem 5rem 2rem 5rem;
+    }
+    
+    .desktop__list{
+        gap: 1.5rem;
+    }
+    
+    .header__text{
+        margin: 5rem 0 0 34%; 
+        width: 24rem;
+        height: 12rem;
+    }
+    
+    .header__text h1{
+        font-size: 48px;
+        line-height: 3.7rem;
+        padding-top: 20px;
+    }
+
+    .vr{
+        padding: 6rem 5rem 3rem 5rem;
+    }
+    
+    .vr__image img{
+        width: 70%;
+    }
+    
+    .vr__text{
+        width: 45%;
+        margin-top: -16rem;
+        margin-left: 35rem;
+        padding: 2rem;
+    }
+    
+    .vr__text h2{
+        padding: 1rem;
+        font-size: 36px;
+        line-height: 2.2rem
+    }
+    
+    .vr__text p{
+        font-size: 18px;
+        line-height: 1.6rem;
+    }
+    
+    .creations{
+        margin: 5rem 5rem 2rem 5rem;
+    }
+    
+    .creations__head h2{
+        font-size: 36px;
+    }
+    
+    .creations__head button{
+        width: 10rem;
+    }
+    
+    .dexmpl{
+        gap: 1.5rem;
+    }
+    
+    .dexmpl__block p{
+        margin: 21rem 1rem 0rem 1rem;
+        font-size: 28px; 
+    }
+    
+    .footer__desktop{
+        padding: 3rem 5rem 3rem 5rem;
+    }
+    
+    
+    .footer__d-list ul{
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px){ 
+    .header{
+        height: 45rem;
+        background-size: 100% 45rem;
+    }
+
+    .header__line{
+        padding: 4rem 8rem 2rem 8rem;
+    }
+    
+    .desktop__list{
+        gap: 2rem;
+    }
+
+    .header__text{
+        margin: 7rem 0 0 35%; 
+        width: 26rem;
+        height: 14rem;
+    }
+    
+    .header__text h1{
+        font-size: 56px;
+        line-height: 4rem;
+    }
+    
+    .vr{
+        padding: 8rem 8rem 3rem 8rem;
+    }
+    
+    .vr__text{
+        width: 40%;
+        margin-top: -16rem;
+        margin-left: 40rem;
+        padding: 3rem;
+    }
+    
+    .vr__text h2{
+        padding: 2rem;
+        font-size: 40px;
+        line-height: 3rem
+    }
+    
+    .vr__text p{
+        padding: 0 2rem 0 2rem;
+        font-size: 20px;
+        line-height: 2rem;
+    }
+    
+    .creations{
+        margin: 10rem 8rem 2rem 8rem;
+    }
+    
+    .creations__head h2{
+        font-size: 40px;
+    }
+    
+    .creations__head button{
+        height: 3rem;
+        width: 12rem;
+        letter-spacing: 0.4rem;
+    }
+    
+    .dexmpl{
+        gap: 2rem;
+    }
+    
+    .dexmpl__block p{
+        margin: 24rem 1rem 0rem 1rem;
+        font-size: 32px; 
+    }
+    
+    .footer__desktop{
+        background-color: var(--black);
+        padding: 3rem 8rem 2rem 8rem;
+    }
+    
+    .footer__d-list ul{
+        gap: 2rem;
+    }
+}
